@@ -10,6 +10,8 @@ COPY . /var/www/html
 RUN apt-get update && apt-get install -y \
     unzip \
     git \
+    libzip-dev \
+    && docker-php-ext-configure zip \
     && docker-php-ext-install zip
 
 # Install Composer
