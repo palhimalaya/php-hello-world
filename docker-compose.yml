@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: palhimalaya/php-hello-world-app:latest
+    container_name: hello-world-app
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8081:8081"
+    command: php -S 0.0.0.0:8081 -t /var/www/html
