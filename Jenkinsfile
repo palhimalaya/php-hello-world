@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                        sh 'docker login -u javatechie -p ${dockerhubpwd}'
+                        sh 'docker login -u palhimalaya -p ${dockerhubpwd}'
                         sh 'docker push ${DOCKER_IMAGE}'
                     }
                 }

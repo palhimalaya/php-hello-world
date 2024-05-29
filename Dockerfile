@@ -24,4 +24,4 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install
 
 # Run the PHP script when the container launches
-CMD [ "php", "-S", "0.0.0.0:8081", "-t", "/var/www/html" ]
+CMD [ "php", "-S", "0.0.0.0:8084", "-t", "/var/www/html" ]
